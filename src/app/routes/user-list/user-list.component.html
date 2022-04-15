@@ -1,0 +1,10 @@
+<div class="mx-2">
+  <div class="p-5">
+    <span class="w-full p-2 mt-5 border-b mb-2"> Liste des utilisateurs {{ allUsers.length }} </span>
+  </div>
+  <div *ngFor="let u of allUsers" class="flex flex-col border rounded-lg mb-2 p-2 ">
+    <span> Nom : <a class="text-indigo-600 hover:underline" [routerLink]="['/angular', u.login.uuid]" >{{ u.name.first }} </a> </span>
+    <span class="">Prénom :  {{ u.name.last }} </span>
+    <span class="">Email :  {{ u.email }} </span>
+  </div>
+</div>
